@@ -14,18 +14,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Inputs inputs = new CMDLineInputs(args);
-        String operator = inputs.read();
-
-        NumberRepository numberRepository = new FIleNumberRepository();
-        List<Double> inputNumbers = numberRepository.read();
-
-       OperationFactory operationFactory = new OperationFactory();
-       Operation operation = operationFactory.getInstance(operator,inputNumbers);
-
-        Outputs outputs = new ConsoleOutput();
-        outputs.show("The result is: " + operation.perform());
-        outputs.show("Exiting the program....");
+    NumberRepository numberRepository = new FIleNumberRepository();
+    CalculatorApp calculatorApp = new CalculatorApp(numberRepository,args);
+    calculatorApp.run();
     }
 
 }

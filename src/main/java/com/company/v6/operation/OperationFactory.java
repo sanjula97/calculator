@@ -3,7 +3,7 @@ package com.company.v6.operation;
 import java.util.List;
 
 /**
- * Created by Anjana Shakthi on 4/1/2019.
+ * Created by Sanjula Karunarsthna on 4/1/2019.
  */
 public class OperationFactory {
     public Operation getInstance(String operator, List<Double>inputNumbers){
